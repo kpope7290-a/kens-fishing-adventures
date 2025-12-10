@@ -1,0 +1,675 @@
+﻿/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Merriweather', serif;
+    background: url('background.jpeg') no-repeat center center fixed;
+    background-size: cover; /* makes the image fill the screen */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-image: url('header.jpeg'); /* placeholder image */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px 20px;
+    position: relative;
+}
+
+    header h1 {
+        font-family: 'Lobster', cursive; /* fun retro fishing vibe */
+        font-size: 2.8em;
+        text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+        margin-bottom: 10px;
+    }
+
+.logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+    .logo img {
+        width: 80px;
+        height: auto;
+    }
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+nav a {
+    font-family: 'Permanent Marker', cursive; /* handwritten tackle box style */
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    background-color: rgba(0, 77, 102, 0.6);
+    transition: background-color 0.3s ease;
+}
+
+    nav a:hover {
+        background-color: rgba(0, 102, 153, 0.8);
+    }
+
+/* Layout container */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 30px auto;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+/* Sidebars */
+.sidebar {
+    flex: 1;
+    background: #e6f2f2;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+    .sidebar h3 {
+        font-family: 'Lobster', cursive;
+        color: #004080;
+        margin-bottom: 10px;
+    }
+
+    .sidebar ul li {
+        margin-bottom: 8px;
+        list-style-type: "🐟 ";
+    }
+
+    .sidebar img {
+        width: 100%;
+        height: auto;
+        border-radius: 6px;
+        margin-bottom: 10px;
+    }
+
+/* Main Content */
+main {
+    flex: 2;
+    padding: 20px;
+    background: rgba(255,255,255,0.9); /* translucent white overlay for readability */
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.intro, .report {
+    margin-bottom: 30px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #004d66;
+    color: #ccc;
+    padding: 15px;
+    margin-top: 40px;
+    font-family: 'Merriweather', serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .logo img {
+        width: 60px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Gallery Layout */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.gallery-item {
+    text-align: center;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 6px;
+        transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+        transform: scale(1.1); /* enlarge on hover */
+    }
+
+    .gallery-item p {
+        margin-top: 10px;
+        font-size: 0.95em;
+        color: #333;
+    }
+
+/* Contact Form */
+.contact-form {
+    max-width: 500px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+    .contact-form label {
+        font-weight: bold;
+        color: #004080;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 1em;
+    }
+
+    .contact-form button {
+        background-color: #004d66;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .contact-form button:hover {
+            background-color: #006699;
+        }
+
+/* Confirmation */
+.confirmation {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+    .confirmation h2 {
+        color: #004080;
+        margin-bottom: 20px;
+        font-family: 'Lobster', cursive;
+    }
+
+    .confirmation p {
+        font-size: 1.1em;
+        margin-bottom: 15px;
+    }
+
+    .confirmation a {
+        color: #004d66;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        .confirmation a:hover {
+            text-decoration: underline;
+        }
+
+/* Charts */
+.moon-chart table,
+.air-pressure table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border: 3px solid #004080; /* bold dark blue border */
+}
+
+.moon-chart th, .air-pressure th {
+    background-color: #004080;
+    color: #fff;
+    padding: 12px;
+    border: 1px solid #333;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.moon-chart td, .air-pressure td {
+    border: 1px solid #999;
+    padding: 10px;
+    text-align: center;
+    font-size: 1em;
+    font-family: 'Merriweather', serif;
+}
+
+.moon-chart tr:nth-child(even),
+.air-pressure tr:nth-child(even) {
+    background-color: #f0f8ff;
+}
+
+.moon-chart tr:nth-child(odd),
+.air-pressure tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.moon-chart tr:hover,
+.air-pressure tr:hover {
+    background-color: #e6f2f2;
+    transition: background-color 0.3s ease;
+}
+/* Tip and Facts Boxes */
+.tip-box, .facts-box {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    text-align: left;
+}
+
+/* Different background colors for variety */
+.tip-box {
+    background: #e6f7ff; /* light blue */
+    border-left: 6px solid #004080; /* bold accent */
+}
+
+.facts-box {
+    background: #fffbe6; /* light yellow */
+    border-left: 6px solid #cc6600; /* bold accent */
+}
+
+    /* Headings */
+    .tip-box h3, .facts-box h3 {
+        font-family: 'Lobster', cursive;
+        margin-bottom: 10px;
+        color: #004080;
+    }
+
+/* Fish Facts List */
+.fish-facts {
+    list-style: none;
+    padding-left: 0;
+}
+
+    .fish-facts li {
+        margin-bottom: 8px;
+        font-family: 'Merriweather', serif;
+        font-size: 1em;
+        position: relative;
+        padding-left: 30px;
+    }
+
+        /* Custom fish bullet points with color */
+        .fish-facts li::before {
+            content: "🐟";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.2em;
+            color: #006699; /* teal fish color */
+        }
+/* Layout */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 30px auto;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.main-content {
+    flex: 2;
+}
+
+.main-row {
+    display: flex;
+    gap: 20px;
+}
+
+/* Catch Box */
+.catch-box {
+    flex: 1;
+    background: #fffbe6;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+    .catch-box h4 {
+        font-family: 'Lobster', cursive;
+        color: #004080;
+        margin-bottom: 10px;
+    }
+
+    .catch-box img {
+        max-width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    .catch-box .caption {
+        margin-top: 10px;
+        font-style: italic;
+        color: #555;
+    }
+
+/* Welcome + Report stacked */
+.welcome-report {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.welcome {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.report {
+    background: #e6f7ff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tip-box {
+    background: #e6f7ff;
+    padding: 20px;
+    border-left: 6px solid #004080;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.facts-box {
+    background: #fffbe6;
+    padding: 20px;
+    border-left: 6px solid #cc6600;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.fish-facts {
+    list-style: none;
+    padding-left: 0;
+}
+
+    .fish-facts li {
+        margin-bottom: 8px;
+        font-family: 'Merriweather', serif;
+        font-size: 1em;
+        position: relative;
+        padding-left: 30px;
+    }
+
+        .fish-facts li::before {
+            content: "🐟";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.2em;
+            color: #006699;
+        }
+.biting-chart table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border: 3px solid #004080;
+}
+
+.biting-chart th {
+    background-color: #004080;
+    color: #fff;
+    padding: 12px;
+    border: 1px solid #333;
+    text-transform: uppercase;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.biting-chart td {
+    border: 1px solid #999;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+}
+
+.biting-chart tr:nth-child(even) {
+    background-color: #f0f8ff;
+}
+
+.biting-chart tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.biting-chart tr:hover {
+    background-color: #e6f2f2;
+    transition: background-color 0.3s ease;
+}
+/* Tackle Table */
+.tackle-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border: 3px solid #004080;
+}
+
+    .tackle-table th {
+        background-color: #004080;
+        color: #fff;
+        padding: 12px;
+        border: 1px solid #333;
+        text-transform: uppercase;
+        font-family: 'Permanent Marker', cursive;
+    }
+
+    .tackle-table td {
+        border: 1px solid #999;
+        padding: 10px;
+        text-align: center;
+        font-family: 'Merriweather', serif;
+    }
+
+    .tackle-table tr:nth-child(even) {
+        background-color: #f0f8ff;
+    }
+
+    .tackle-table tr:nth-child(odd) {
+        background-color: #ffffff;
+    }
+
+    .tackle-table tr:hover {
+        background-color: #e6f2f2;
+        transition: background-color 0.3s ease;
+    }
+
+/* License Box */
+.license {
+    margin: 20px 0;
+    padding: 15px;
+    background: #fffbe6;
+    border-left: 6px solid #cc6600;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Sidebar Boxes */
+.sidebar section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.gear-box {
+    background: #e6f7ff;
+    border-left: 6px solid #004080;
+}
+
+.essentials-box {
+    background: #f9f9f9;
+    border-left: 6px solid #006699;
+}
+
+.knots-box {
+    background: #fffbe6;
+    border-left: 6px solid #cc6600;
+}
+
+.sidebar h3 {
+    font-family: 'Lobster', cursive;
+    color: #004080;
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidebar li {
+    margin-bottom: 8px;
+    font-family: 'Merriweather', serif;
+}
+/* Locations Table */
+.locations-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border: 2px solid #004080;
+}
+
+    .locations-table th {
+        background-color: #004080;
+        color: #fff;
+        padding: 12px;
+        border: 1px solid #333;
+        text-transform: uppercase;
+        font-family: 'Permanent Marker', cursive;
+    }
+
+    .locations-table td {
+        border: 1px solid #999;
+        padding: 10px;
+        text-align: left;
+        font-family: 'Merriweather', serif;
+    }
+
+    .locations-table tr:nth-child(even) {
+        background-color: #f0f8ff;
+    }
+
+    .locations-table tr:nth-child(odd) {
+        background-color: #ffffff;
+    }
+
+    .locations-table tr:hover {
+        background-color: #e6f2f2;
+        transition: background-color 0.3s ease;
+    }
+
+/* Sidebar Resources */
+.resources-box {
+    margin: 30px 0;
+    padding: 15px;
+    background: #e6f7ff;
+    border-left: 6px solid #004080;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+    .resources-box h3 {
+        font-family: 'Lobster', cursive;
+        color: #004080;
+        margin-bottom: 10px;
+    }
+
+    .resources-box ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .resources-box li {
+        margin-bottom: 8px;
+        font-family: 'Merriweather', serif;
+    }
+
+    .resources-box a {
+        text-decoration: none;
+        color: #004d66;
+        font-weight: bold;
+    }
+
+        .resources-box a:hover {
+            /* Make images responsive */
+            img
+
+{
+    max-width: 100%;
+    height: auto;
+}
+
+/* Allow tables to scroll on small screens */
+.locations-table, .tackle-table, .moon-chart table, .air-pressure table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+/* Responsive navigation */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+}

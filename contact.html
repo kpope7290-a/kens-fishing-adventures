@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Contact Ken’s Fishing Adventures. Send a message, submit your catch, or email directly.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Ken’s Fishing Adventures</title>
+    <meta name="description" content="Contact Ken’s Fishing Adventures. Send a message, submit your catch, or email directly.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Ken’s Fishing Logo">
+        </div>
+        <h1>Ken’s Fishing Adventures</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="weather.html">Weather & Moon</a></li>
+                <li><a href="biting.html">What’s Biting</a></li>
+                <li><a href="locations.html">Fishing Locations</a></li>
+                <li><a href="tackle.html">Tackle Guide</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Contact Me</h2>
+        <p>
+            You can also email me directly at
+            <a href="mailto:kjpope7290@gmail.com">kjpope7290@gmail.com</a>
+        </p>
+
+        <!-- General Contact Form -->
+        <form action="confirmation.html" method="get" class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <!-- Catch of the Week Submission -->
+        <h2>Catch of the Week Submission</h2>
+        <form action="confirmation.html" method="get" enctype="multipart/form-data" class="contact-form">
+            <label for="angler">Angler Name:</label>
+            <input type="text" id="angler" name="angler" required>
+
+            <label for="species">Fish Species:</label>
+            <input type="text" id="species" name="species" required>
+
+            <label for="weight">Weight/Length:</label>
+            <input type="text" id="weight" name="weight" required>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+
+            <label for="photo">Upload Photo:</label>
+            <input type="file" id="photo" name="photo">
+
+            <label for="story">Story:</label>
+            <textarea id="story" name="story" rows="5"></textarea>
+
+            <button type="submit">Submit Catch</button>
+        </form>
+    </main>
+
+    <footer>
+        &copy; 2025 Ken’s Fishing Adventures
+    </footer>
+</body>
+</html>
+

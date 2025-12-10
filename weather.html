@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Weather and moon phase charts for Chicago anglers. Plan trips with forecasts and bite activity.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather & Moon - Ken’s Fishing Adventures</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Ken’s Fishing Logo">
+        </div>
+        <h1>Ken’s Fishing Adventures</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="weather.html" class="active">Weather & Moon</a></li>
+                <li><a href="biting.html">What’s Biting</a></li>
+                <li><a href="locations.html">Fishing Locations</a></li>
+                <li><a href="tackle.html">Tackle Guide</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Weather & Moon Phases</h2>
+        <p>Fishing isn’t just about luck — the moon and the weather play a big role in how fish bite. Different phases of the moon change feeding patterns, and knowing when fish are most active can save you hours of waiting. Anglers often notice stronger bites during new and full moons, while waning moons can make fish sluggish. Paying attention to moon cycles helps you plan trips when the odds are in your favor.</p>
+
+        <!-- Moon Chart -->
+        <section class="moon-chart">
+            <h3>Moon Phases & Fish Bite Activity</h3>
+            <table>
+                <tr>
+                    <th>Moon Phase</th>
+                    <th>Fish Bite Info</th>
+                    <th>Best Species</th>
+                </tr>
+                <tr>
+                    <td>🌑 New Moon</td>
+                    <td>Fish feed hard, especially at night.</td>
+                    <td>🐟 Salmon, 🎣 Trout</td>
+                </tr>
+                <tr>
+                    <td>🌓 Waxing Moon</td>
+                    <td>Steady bites during the day.</td>
+                    <td>🐟 Perch, 🎣 Bass</td>
+                </tr>
+                <tr>
+                    <td>🌕 Full Moon</td>
+                    <td>Strong feeding windows, especially at night.</td>
+                    <td>🐟 Catfish, 🎣 Walleye</td>
+                </tr>
+                <tr>
+                    <td>🌗 Waning Moon</td>
+                    <td>Bites slow down, fish hang deeper.</td>
+                    <td>🐟 Deep‑water Trout</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Air Pressure -->
+        <section class="air-pressure">
+            <h3>Air Pressure & Fish Biting</h3>
+            <p>Air pressure is another factor that makes a big difference in fishing success. Fish have swim bladders that react to pressure changes, so they feed differently depending on the weather. Rising pressure usually means steady bites, while falling pressure can trigger short feeding frenzies before storms. Low pressure often slows everything down, pushing fish deeper and making them harder to catch.</p>
+            <table>
+                <tr>
+                    <th>Pressure Trend</th>
+                    <th>Barometric Range (inHg)</th>
+                    <th>Fish Behavior</th>
+                    <th>Best Species</th>
+                </tr>
+                <tr>
+                    <td>⬆️ Rising Pressure</td>
+                    <td>30.1 – 30.4</td>
+                    <td>Fish are active, steady feeding.</td>
+                    <td>🐟 Perch, 🎣 Bass</td>
+                </tr>
+                <tr>
+                    <td>➡️ Stable Pressure</td>
+                    <td>29.9 – 30.1</td>
+                    <td>Normal feeding activity, predictable bites.</td>
+                    <td>🐟 Bluegill, 🎣 Crappie</td>
+                </tr>
+                <tr>
+                    <td>⬇️ Falling Pressure</td>
+                    <td>29.5 – 29.9</td>
+                    <td>Short feeding window before storms.</td>
+                    <td>🐟 Salmon, 🎣 Trout</td>
+                </tr>
+                <tr>
+                    <td>⚠️ Low Pressure</td>
+                    <td>29.2 and below</td>
+                    <td>Fish retreat deeper, sluggish bites.</td>
+                    <td>🐟 Catfish (near bottom)</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Weather Widget -->
+        <section class="weather-widget">
+            <h3>7-Day Weather Forecast</h3>
+            <p>Checking the weather before heading out is just as important as grabbing your tackle box. Temperature, wind speed, and wind direction all affect where fish move and how they bite. A steady forecast means predictable fishing, while sudden changes can either help or hurt your chances. Use the 7‑day forecast below to plan your trips around the best conditions.</p>
+            <a class="weatherwidget-io" href="https://forecast7.com/en/41d88n87d63/chicago/"
+               data-label_1="CHICAGO"
+               data-label_2="WEATHER"
+               data-theme="pure"
+               data-days="7"
+               data-units="us"   <!-- Fahrenheit -->
+         data-basecolor="#e6f2f2"
+         data-textcolor="#004080"
+         data-highcolor="#cc0000"
+         data-lowcolor="#006699"
+         data-suncolor="#ffcc00"
+         data-cloudcolor="#999999"
+         data-raincolor="#006699">
+         Chicago Weather
+      </a>
+            <script>
+                !function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (!d.getElementById(id)) {
+                        js = d.createElement(s); js.id = id;
+                        js.src = 'https://weatherwidget.io/js/widget.min.js';
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }
+                }(document, 'script', 'weatherwidget-io-js');
+            </script>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 Ken’s Fishing Adventures
+    </footer>
+</body>
+</html>
+
